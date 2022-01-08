@@ -1,31 +1,22 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from 'gatsby-plugin-image'
+import * as React from 'react'
+import Layout from '../components/layout'
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
-      <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
-      <Link to="/using-dsg">Go to "Using DSG"</Link>
-    </p>
-  </Layout>
-)
+const IndexPage = () => {
+  return (
+    
+    <Layout pageTitle="Welcome to the Sneakersworld!">
+      <p>Lorem ipsum</p>
+      <StaticImage
+        alt="sneakers"
+        src="https://sneakernews.com/wp-content/uploads/2013/07/a-visual-compendium-of-sneakers-poster-by-pop-chart-lab-1.jpg"
+      />
+      {/*<StaticImage
+      alt="sneakers"
+      src="https://www.thestreet.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cq_auto:good%2Cw_1200/MTY3NTQxNDczNTUwMDE3OTI3/sneaker-boutiques-stich-up-funding-amid-resale-boom.png"
+      />*/}
+    </Layout>
+  )
+}
 
 export default IndexPage
